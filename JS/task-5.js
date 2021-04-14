@@ -1,6 +1,9 @@
-Напиши класс Car с указанными свойствами и методами.
+// Напиши класс Car с указанными свойствами и методами.
 
 class Car {
+  static getSpecs(car) {
+ console.log(Object.values(car));
+  }
   /*
    * Добавь статический метод `getSpecs(car)`,
    * который принимает объект-машину как параметр и выводит
@@ -17,7 +20,13 @@ class Car {
    *  isOn - заведен ли автомобиль, значения true или false. Изначально false
    *  distance - общий киллометраж, изначально 0
    */
-  constructor() {}
+  constructor(speed = 0, price = 0, maxSpeed = 0, isOn = false, distance = 0) {
+    this.speed = speed;
+    this.price = price;
+    this.maxSpeed = maxSpeed;
+    this.isOn = isOn;
+    this.distance = distance;
+  }
 
   /*
    * Добавь геттер и сеттер для свойства price,
