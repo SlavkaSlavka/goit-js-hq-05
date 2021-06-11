@@ -6,8 +6,8 @@ const Account = function ({ login = {}, email = {} }) {
   this.login = login;
   this.email = email;
   this.getInfo = function () {
-  console.log(this.login, this.email);
-}
+    console.log(this.login, this.email);
+  }
 }
 
 
