@@ -12,15 +12,18 @@ class StringBuilder {
     constructor(line = '') {
         this._value = line;
         this.append = function (str) {
-            this.value = this._value + str;
+            this._value = this._value + str;
         };
         this.prepend = function (str) {
-            this.value = str + this.value;
+            this._value = str + this.value;
         }
         this.pad = function (str) {
-            this.value = str + this.value + str;
+            this._value = str + this.value + str;
         }
-    };
+    } 
+ get value() {
+    return this._value;
+  }
 };
  const builder = new StringBuilder('.');
 

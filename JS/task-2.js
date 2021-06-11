@@ -9,9 +9,11 @@ const User = function ({ name = '', age = 0, followers = 0}) {
   this.name = name;
   this.age = age;
   this.followers = followers;
+
+  this.getInfo = function () {
+  console.log(`User ${this.name} is ${this.age} years old and has
+   ${this.followers} followers`);
 }
-User.prototype.getInfo = function () {
-  console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers`);
 }
 const mango = new User({
   name: 'Mango',
@@ -27,4 +29,5 @@ const poly = new User({
   followers: 17,
 });
 
- poly.getInfo(); // User Poly is 3 years old and has 17 followers
+poly.getInfo(); // User Poly is 3 years old and has 17 followers
+ 
